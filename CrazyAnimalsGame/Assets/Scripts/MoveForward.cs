@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MoveForward : MonoBehaviour
+{
+    public float speed = 40f;
+     float borderZ = 31;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Move();
+    }
+    void Move()
+    {
+        transform.Translate(Vector3.forward * Time.deltaTime * speed); ;
+
+        if(transform.position.z > borderZ)
+        {
+            Destroy(gameObject);
+        }
+        if(transform.position.z < -10)
+        {
+            Destroy(gameObject);
+        }
+    }
+}
