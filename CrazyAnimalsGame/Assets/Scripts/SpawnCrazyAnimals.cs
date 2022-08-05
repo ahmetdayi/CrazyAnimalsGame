@@ -25,7 +25,9 @@ public class SpawnCrazyAnimals : MonoBehaviour
     {
         animalIndex = Random.Range(0,crazyAnimals.Length);
         choosenAnimal = crazyAnimals[animalIndex];
-        zIndex = Random.Range(-11.5f,-7f);
-        Instantiate(choosenAnimal, new Vector3(-42,0,zIndex), choosenAnimal.transform.rotation);
+        zIndex = Random.Range(-11.5f,-3f);
+       Instantiate(choosenAnimal, new Vector3(-42,0,zIndex), choosenAnimal.transform.rotation);
+
+       
     }
 }
